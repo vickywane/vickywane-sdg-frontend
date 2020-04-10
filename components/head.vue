@@ -17,5 +17,20 @@ export default {};
   & h5 {
     font-size: 1.5rem;
   }
+  @media (--sm) {
+    & h5 {
+      font-size: 1.25rem;
+    }
+  }
+  @media (--md) {
+    & h5 {
+      font-size: 1.5rem;
+    }
+  }
+  @media (--xl) {
+    & h5 {
+      font-size: 1.5rem;
+    }
+  }
 }
 </style>

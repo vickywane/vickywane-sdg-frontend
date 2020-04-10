@@ -1,33 +1,43 @@
 <template>
   <div class="body">
     <BCard class="card">
-      <div>
+      <div v-if="computed != true">
+        <div>
+          <br />
+          <label>Current Population</label>
+          <input placeholder="Current Population" type="number" id="data-population" />
+          <br />
+          <br />
+          <label>Expected Time to Elapse</label>
+          <input placeholder="Time to Elapse" type="number" id="data-time-to-elapse" />
+          <br />
+          <br />
+          <label>Total Reported Cases</label>
+          <input placeholder="Reported Cases " type="number" id="data-reported-cases
+" />
+          <br />
+          <br />
+          <label>Total Reported Cases</label>
+          <input placeholder="Total Hosiptal Beds" type="number" />
+        </div>
         <br />
-        <label>Current Population</label>
-        <input placeholder="Current Population" type="number" />
+        <label for="period">Period Type :</label>
+        <select id="data-period-type a">
+          <option value="days">Days</option>
+          <option value="weeks">Weeks</option>
+          <option value="months">Months</option>
+        </select>
         <br />
         <br />
-        <label>Expected Time to Elapse</label>
-        <input placeholder="Time to Elapse" type="number" />
-        <br />
-        <br />
-        <label>Total Reported Cases</label>
-        <input placeholder="Reported Cases " type="number" />
-        <br />
-        <br />
-        <label>Total Reported Cases</label>
-        <input placeholder="Total Hosiptal Beds" type="number" />
+        <button @click="computed = true">Estimate Data</button>
       </div>
-      <br />
-      <label for="period">Period Type :</label>
-      <select id="period">
-        <option value="days">Days</option>
-        <option value="weeks">Weeks</option>
-        <option value="months">Months</option>
-      </select>
-      <br />
-      <br />
-      <button>Estimate Data</button>
+
+      <div class="result" v-else>
+        <h5>The result from your figures is ;</h5>
+
+        <br />
+        <button @click="computed = false" id="data-go-estimate">Make a new Estimate</button>
+      </div>
     </BCard>
   </div>
 </template>
@@ -36,13 +46,22 @@
 import { BCard } from "bootstrap-vue";
 
 export default {
-  name: "Home"
+  name: "Home",
+  data: () => {
+    return {
+      computed: false
+    };
+  }
 };
 </script>
 
 <style scoped lang="postcss" >
+.result {
+  padding: 3rem 1rem;
+}
+
 .body {
-  padding: 1rem;
+  padding: 5rem 1rem;
   justify-content: center;
   display: flex;
   place-items: center;
@@ -51,20 +70,19 @@ export default {
 .card {
   box-shadow: 0px 3px 5px grey;
   width: 40rem;
-
   & div {
     text-align: center;
-    & label {
-      text-align: left;
-      font-size: 1.1rem;
-    }
-    & input {
-      width: 32rem;
-      border: 1px solid #000;
-      height: 5.5vh;
-      border-radius: 4px;
-      padding: 0.7rem 1.5rem;
-    }
+  }
+  & label {
+    text-align: left;
+    font-size: 1.1rem;
+  }
+  & input {
+    width: 32rem;
+    border: 1px solid #000;
+    height: 5.5vh;
+    border-radius: 4px;
+    padding: 0.7rem 1.5rem;
   }
   & button {
     background: transparent;
@@ -72,6 +90,36 @@ export default {
     padding: 0.7rem 5rem;
     border: 1px solid #000;
     border-radius: 5px;
+  }
+  @media (--sm) {
+    width: 24rem;
+    & input {
+      width: 21rem;
+      border: 1px solid #000;
+      height: 5.5vh;
+      border-radius: 4px;
+      padding: 0.7rem 1.5rem;
+    }
+  }
+  @media (--md) {
+    width: 35rem;
+    & input {
+      width: 27rem;
+      border: 1px solid #000;
+      height: 5.5vh;
+      border-radius: 4px;
+      padding: 0.7rem 1.5rem;
+    }
+  }
+  @media (--xl) {
+    width: 42rem;
+    & input {
+      width: 32rem;
+      border: 1px solid #000;
+      height: 5.5vh;
+      border-radius: 4px;
+      padding: 0.7rem 1.5rem;
+    }
   }
 }
 </style>

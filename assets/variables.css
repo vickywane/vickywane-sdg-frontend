@@ -11,7 +11,6 @@
 }
 
 /* Breakpoints */
-@custom-media --sm (width >= 576px);
+@custom-media --sm (width >= 300px);
 @custom-media --md (width >= 786px);
-@custom-media --lg (width >= 992px);
 @custom-media --xl (width >= 1200px);

@@ -13,8 +13,7 @@
           <br />
           <br />
           <label>Total Reported Cases</label>
-          <input placeholder="Reported Cases " type="number" id="data-reported-cases
-" />
+          <input placeholder="Reported Cases " type="number" id="data-reported-cases" />
           <br />
           <br />
           <label>Total Reported Cases</label>
@@ -44,6 +43,11 @@
 
 <script>
 import { BCard } from "bootstrap-vue";
+import covid19Estimator from "./estimator";
+
+const estimate = data => {
+  covid19Estimator(data);
+};
 
 export default {
   name: "Home",

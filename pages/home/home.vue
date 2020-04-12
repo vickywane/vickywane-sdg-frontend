@@ -67,10 +67,6 @@
 import { BCard } from "bootstrap-vue";
 import covid19Estimator from "./estimator";
 
-const estimate = data => {
-  covid19Estimator(data);
-};
-
 export default {
   name: "Home",
   data: () => {

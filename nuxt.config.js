@@ -37,7 +37,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://bootstrap-vue.js.org
+    "nuxt-purgecss", 
     'bootstrap-vue/nuxt',
   ],
   /*

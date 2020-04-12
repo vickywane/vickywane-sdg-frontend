@@ -65,7 +65,6 @@
 
 <script>
 import { BCard } from "bootstrap-vue";
-import covid19Estimator from "./estimator";
 
 export default {
   name: "Home",

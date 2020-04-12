@@ -38,7 +38,6 @@ export default {
   */
   modules: [
     "nuxt-purgecss", 
-    'bootstrap-vue/nuxt',
   ],
   /*
   ** Build configuration

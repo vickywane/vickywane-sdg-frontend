@@ -1,6 +1,6 @@
 <template>
   <div class="body">
-    <BCard class="card">
+    <div class="card">
       <div v-if="computed != true">
         <div>
           <br />
@@ -59,13 +59,11 @@
         <br />
         <button @click="computed = false" id="data-go-estimate">Make a new Estimate</button>
       </div>
-    </BCard>
+    </div>
   </div>
 </template>
 
 <script>
-import { BCard } from "bootstrap-vue";
-
 export default {
   name: "Home",
   data: () => {

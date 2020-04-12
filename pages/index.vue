@@ -6,7 +6,6 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
 import Header from "../components/head.vue";
 import Home from "./home/home.vue";
 

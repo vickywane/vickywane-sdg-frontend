@@ -4,28 +4,50 @@
       <div v-if="computed != true">
         <div>
           <br />
-          <label>Current Population</label>
-          <input placeholder="Current Population" type="number" id="data-population" />
+          <label>
+            Current Population
+            <input
+              placeholder="Current Population"
+              type="number"
+              id="data-population"
+            />
+          </label>
           <br />
           <br />
-          <label>Expected Time to Elapse</label>
-          <input placeholder="Time to Elapse" type="number" id="data-time-to-elapse" />
+          <label>
+            Expected Time to Elapse
+            <input
+              placeholder="Time to Elapse"
+              type="number"
+              id="data-time-to-elapse"
+            />
+          </label>
           <br />
           <br />
-          <label>Total Reported Cases</label>
-          <input placeholder="Reported Cases " type="number" id="data-reported-cases" />
+          <label>
+            Total Reported Cases
+            <input
+              placeholder="Reported Cases "
+              type="number"
+              id="data-reported-cases"
+            />
+          </label>
           <br />
           <br />
-          <label>Total Reported Cases</label>
-          <input placeholder="Total Hosiptal Beds" type="number" />
+          <label>
+            Total Reported Cases
+            <input placeholder="Total Hosiptal Beds" type="number" />
+          </label>
         </div>
         <br />
-        <label for="period">Period Type :</label>
-        <select id="data-period-type a">
-          <option value="days">Days</option>
-          <option value="weeks">Weeks</option>
-          <option value="months">Months</option>
-        </select>
+        <label for="period">
+          Period Type :
+          <select id="data-period-type a">
+            <option value="days">Days</option>
+            <option value="weeks">Weeks</option>
+            <option value="months">Months</option>
+          </select>
+        </label>
         <br />
         <br />
         <button @click="computed = true">Estimate Data</button>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div lang="en" >
     <Header />
     <Home />
   </div>
@@ -11,7 +11,7 @@ import Header from "../components/head.vue";
 import Home from "./home/home.vue";
 
 export default {
-  name: "Index",
+  name: "Index", 
   components: {
     Header,
     Home

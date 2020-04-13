@@ -30,21 +30,5 @@ export default {
   ** Nuxt.js modules
   */
   modules: ['nuxt-purgecss'],
-  build: {
-    extractCSS: true,
-    extend(config, { isDev, isClient }) {
-      if (!isDev && isClient) {
-        config.plugins.push(
-          new PurgecssPlugin({
-            paths: glob.sync([
-              path.join(__dirname, './pages/**/*.vue'),
-              path.join(__dirname, './pages/home/*.vue'),
-              path.join(__dirname, './components/**/*.vue'),
-            ]),
-            whitelist: ['html', 'body'],
-          })
-        );
-      }
-    },
-  },
+  build: { },
 };

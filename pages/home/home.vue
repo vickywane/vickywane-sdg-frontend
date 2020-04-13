@@ -110,35 +110,5 @@ export default {
     border: 1px solid #000;
     border-radius: 5px;
   }
-  @media (--sm) {
-    width: 24rem;
-    & input {
-      width: 21rem;
-      border: 1px solid #000;
-      height: 5.5vh;
-      border-radius: 4px;
-      padding: 0.7rem 1.5rem;
-    }
-  }
-  @media (--md) {
-    width: 35rem;
-    & input {
-      width: 27rem;
-      border: 1px solid #000;
-      height: 5.5vh;
-      border-radius: 4px;
-      padding: 0.7rem 1.5rem;
-    }
-  }
-  @media (--xl) {
-    width: 42rem;
-    & input {
-      width: 32rem;
-      border: 1px solid #000;
-      height: 5.5vh;
-      border-radius: 4px;
-      padding: 0.7rem 1.5rem;
-    }
-  }
 }
 </style>

@@ -15,18 +15,7 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
-  /*
-  ** Plugins to load before mounting the App
-  */
   plugins: [],
   /*
   ** Nuxt.js dev-modules
@@ -41,7 +30,6 @@ export default {
       plugins: {
         'postcss-preset-env': {
           stage: 0,
-          importFrom: './assets/variables.css',
         },
         'rucksack-css': {},
       },

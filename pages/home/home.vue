@@ -74,7 +74,7 @@ export default {
 };
 </script>
 
-<style scoped lang="postcss" >
+<style >
 .result {
   padding: 3rem 1rem;
 }
@@ -89,26 +89,23 @@ export default {
 .card {
   box-shadow: 0px 3px 5px grey;
   width: 40rem;
-  & div {
-    text-align: center;
-  }
-  & label {
+} 
+label {
     text-align: left;
     font-size: 1.1rem;
-  }
-  & input {
+  } 
+input {
     width: 32rem;
     border: 1px solid #000;
     height: 5.5vh;
     border-radius: 4px;
     padding: 0.7rem 1.5rem;
   }
-  & button {
+ button {
     background: transparent;
     color: #000;
     padding: 0.7rem 5rem;
     border: 1px solid #000;
     border-radius: 5px;
   }
-}
 </style>

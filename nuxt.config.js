@@ -36,12 +36,7 @@ export default {
   /*
   ** Nuxt.js modules
   */
-  modules: [
-    "nuxt-purgecss", 
-  ],
-  /*
-  ** Build configuration
-  */
+  modules: ['nuxt-purgecss'],
   build: {
     postcss: {
       plugins: {
@@ -59,7 +54,7 @@ export default {
           new PurgecssPlugin({
             paths: glob.sync([
               path.join(__dirname, './pages/**/*.vue'),
-              path.join(__dirname, './layouts/**/*.vue'),
+              path.join(__dirname, './pages/home/*.vue'),
               path.join(__dirname, './components/**/*.vue'),
             ]),
             whitelist: ['html', 'body'],

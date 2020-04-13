@@ -16,6 +16,11 @@ export default {
       },
     ],
   },
+  /*
+  ** Customize the progress-bar color
+  */
+  loading: false,
+  
   plugins: [],
   /*
   ** Nuxt.js dev-modules
@@ -26,14 +31,6 @@ export default {
   */
   modules: ['nuxt-purgecss'],
   build: {
-    postcss: {
-      plugins: {
-        'postcss-preset-env': {
-          stage: 0,
-        },
-        'rucksack-css': {},
-      },
-    },
     extractCSS: true,
     extend(config, { isDev, isClient }) {
       if (!isDev && isClient) {
